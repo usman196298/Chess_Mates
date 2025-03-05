@@ -26,9 +26,6 @@ export const Loading = ({ title, onClickRefund, roomName }) => {
 
   return (
     <div className="loading">
-      <button className="loading__help-button" >
-          Help
-        </button>
       <div className="loading__container">
         <div className="loading__stars">
           {starArray.map((item, idx) => (
@@ -36,7 +33,7 @@ export const Loading = ({ title, onClickRefund, roomName }) => {
               key={`star_${idx}`}
               className="star"
               src={
-                (starArray.length - 1 - idx) <= currentTime % starArray.length ? star_full : star_none
+                idx <= currentTime % starArray.length ? star_full : star_none
               }
               alt="pic"
             />
