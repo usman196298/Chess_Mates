@@ -30,6 +30,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <div className="wallet-button">
+          <button>Wallet Connection</button>
+        </div>
         <Routes>
           <Route path="/" element={<GameSelect />} />
           <Route path="/matchPlay" element={<MatchPlay />} />
