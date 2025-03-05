@@ -1949,9 +1949,9 @@ export default class Scene extends Component {
             />
 
             {/* loading screen */}
-            {this.state && this.state.showWaitingModal ? (
-              <Loading title={this.state.waitingModalTitle} onClickRefund={this.onClickRefund} roomName={this.props.roomName} />
-            ) : null}
+            
+              <Loading onClickRefund={this.onClickRefund} roomName={this.props.roomName} />
+            
 
             {/* Invite friend modal */}
             <InviteFriend
