@@ -33,8 +33,7 @@ export const Loading = ({ title, onClickRefund, roomName }) => {
               key={`star_${idx}`}
               className="star"
               src={
-                idx <= currentTime % starArray.length ? star_full : star_none
-              }
+                idx >= (starArray.length - (currentTime % (starArray.length + 1))) ? star_full : star_none              }
               alt="pic"
             />
           ))}
